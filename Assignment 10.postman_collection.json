@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "24770bc4-f38b-41ee-a996-d1db7852deba",
+		"name": "Assignment 10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27999934",
+		"_collection_link": "https://warped-moon-867004.postman.co/workspace/Ragab's-Workspace~139f7d90-8c35-40b6-ac87-a4f60780b551/collection/27999934-24770bc4-f38b-41ee-a996-d1db7852deba?action=share&source=collection_link&creator=27999934"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rmidoragab222@gmail.com\",\r\n    \"userName\":\"ragab\" ,\r\n    \"password\" : \"Mohamed8809\" ,\r\n    \"cPassword\": \"Mohamed8809\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rmidoaragab222@gmail.com\" , \r\n    \"password\" : \"Mohamed8809\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "ProfilePic",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profilepic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profilepic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profilepic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profilepic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CoverPic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjkyYmFjN2JkMGQ4MWEzZDIwMjI5YiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTM5MTMwOSwiZXhwIjoxNzAxNDc3NzA5fQ.lb_SD5AurRZnqEhxGPOmxp6foEcVlx_VsB_tj5_WIVc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/D:/Ay 7aga/Dis PFP/546deebabb7616e8691790451555a94a.jpg",
+										"/D:/Ay 7aga/Dis PFP/354219392_819440329667315_5612727476130331247_n.jpg",
+										"/D:/Ay 7aga/Dis PFP/b98c8fc4b608d16ea31d1efbb4ffe356.jpg",
+										"/D:/Ay 7aga/Dis PFP/dc96e0f957ea875c57ed808f053805c4.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profilecoverpic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profilecoverpic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjkyYmFjN2JkMGQ4MWEzZDIwMjI5YiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTM5MTMwOSwiZXhwIjoxNzAxNDc3NzA5fQ.lb_SD5AurRZnqEhxGPOmxp6foEcVlx_VsB_tj5_WIVc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTBlY2MzMzk2ZDc4NmE0YWJiMSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxMzMwMiwiZXhwIjoxNzAxNDk5NzAyfQ.lBzp04PPQ8iVjzNZ-rgYxKrCYht2gwsRVOS5NKGARtQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"age\":88\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updateprofile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ban Account",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"6569810ecc3396d786a4abb1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/banaccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"banaccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxNTYwMywiZXhwIjoxNzAxNTAyMDAzfQ.4FN1yOWRFbRPUu-CqQ_hR_CaOqN6rDX2PEUBpAhgan0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postBody\":\"ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/createpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"createpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxNTYwMywiZXhwIjoxNzAxNTAyMDAzfQ.4FN1yOWRFbRPUu-CqQ_hR_CaOqN6rDX2PEUBpAhgan0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postBody\":\"ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/createpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"createpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnLike Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxNTYwMywiZXhwIjoxNzAxNTAyMDAzfQ.4FN1yOWRFbRPUu-CqQ_hR_CaOqN6rDX2PEUBpAhgan0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postBody\":\"ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/createpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"createpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQ5MDcyNiwiZXhwIjoxNzAxNTc3MTI2fQ.gNNifxRMxo3PR27R0-PYV1k-QYjFhZ7-_IJSTMnE1JE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postBody\":\"ay7agassasa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/updatepost/656aafcd4fffe20eb2f52f92",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"updatepost",
+								"656aafcd4fffe20eb2f52f92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTU2NzU5NiwiZXhwIjoxNzAxNjUzOTk2fQ.FPXAbCcyAkaVYh1x43jnOsjFzU4rtxfOa5aW6UqQSBA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/deletepost/6569ce0160de529c45193bd0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"deletepost",
+								"6569ce0160de529c45193bd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTBlY2MzMzk2ZDc4NmE0YWJiMSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTU3MjcxMiwiZXhwIjoxNzAxNjU5MTEyfQ.2ehDJNcKPRpXQoc7xBSioRc3qFquN71HubLTV1ALL40",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts For User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTBlY2MzMzk2ZDc4NmE0YWJiMSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTU3MjcxMiwiZXhwIjoxNzAxNjU5MTEyfQ.2ehDJNcKPRpXQoc7xBSioRc3qFquN71HubLTV1ALL40",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxNTYwMywiZXhwIjoxNzAxNTAyMDAzfQ.4FN1yOWRFbRPUu-CqQ_hR_CaOqN6rDX2PEUBpAhgan0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"el post dah mia el mia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/6569cbb5954b4b1f49545dc6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"6569cbb5954b4b1f49545dc6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTY3NzE1MGIzMDUyZWEzYjhlNyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTQxNTYwMywiZXhwIjoxNzAxNTAyMDAzfQ.4FN1yOWRFbRPUu-CqQ_hR_CaOqN6rDX2PEUBpAhgan0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postBody\":\"ay7aga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/createpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"createpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replay On Comments And Replies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmMxMDIwMTAzNDcxZTIwYTU1OTM4YSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTU4MDg5NSwiZXhwIjoxNzAxNjY3Mjk1fQ.bPsUsTccqua32kUjUBLeTgpnymT35Rx2dt_ZjNPCbj8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"ay7aga bro max of a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/replaycomment/656c345cd60c12a35bb73e9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"replaycomment",
+								"656c345cd60c12a35bb73e9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments And Replies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "RAGAB__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Njk4MTBlY2MzMzk2ZDc4NmE0YWJiMSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTcwMTU3MjcxMiwiZXhwIjoxNzAxNjU5MTEyfQ.2ehDJNcKPRpXQoc7xBSioRc3qFquN71HubLTV1ALL40",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/post/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft Delete Replies",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/softdeletereplies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"softdeletereplies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
